@@ -3,9 +3,6 @@ import re
 import pickle
 import chess
 
-command_dict = {'print': print,
-                '?': chess_help}
-
 
 class Board(chess.Board):
     def __init__(self, dest, *args, **kwargs):
@@ -36,4 +33,8 @@ def parse(board, message):
             board.save(board.dest)
             return str(board)
         except(Exception) as e:
-            
+           print("oops") 
+
+command_dict = {'print': print,
+                '?': chess_help}
+
