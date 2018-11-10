@@ -105,3 +105,6 @@ venv.bak/
 
 # vim swaps
 *.swp
+
+# Access tokens   //nice try FBI
+conf.py
