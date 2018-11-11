@@ -10,7 +10,7 @@ docker run -itd \
 -p 5002:5000 \
 -v $REPO_DIR/.:/workspace \
 -v $REPO_DIR/helpers:/workspace/helpers \
--v $REPO_DIR/config:/opt/config \
+-v $REPO_DIR/config:/workspace/config \
 -e PYTHONPATH=/workspace/ \
 --entrypoint /workspace/run.sh \
 chesspacito $@
