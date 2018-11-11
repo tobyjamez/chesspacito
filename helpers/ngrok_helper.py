@@ -10,7 +10,6 @@ __all__ = ['get_ngrok_url']
 def get_ngrok_url(addr='127.0.0.1', port=4040):
     ngrokjson = ''
     try:
-        print("Trying to connect to %r" % addr)
         ngrokpage = requests.get("http://{}:{}".format(addr, port)).text
     except:
         raise RuntimeError('Not able to connect to ngrok webui')

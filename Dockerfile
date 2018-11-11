@@ -15,8 +15,8 @@ RUN pip3 install --upgrade pip setuptools \
     && ln -sf /usr/bin/python3 /usr/bin/python
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
-RUN pip install webexteamssdk
-RUN pip install python-chess
+COPY webexteamssdk /webexteamssdk
+RUN pip install /webexteamssdk
 ADD https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip /tmp/ngrok.zip
 RUN set -x \
     && unzip -o /tmp/ngrok.zip -d /bin
