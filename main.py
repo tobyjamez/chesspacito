@@ -10,6 +10,7 @@ from helpers import (read_yaml_data,
 from conf import access_token
 
 flask_app = Flask(__name__)
+teams_api = None
 
 @flask_app.route('/teamswebhook', methods=['POST'])
 def teamswebhook():
@@ -17,7 +18,8 @@ def teamswebhook():
     Handle 
     """
     print("\n" + str(request.method) + " received\n")
-    
+    print(request.json)
+
     json_data = request.json
     webhook_obj = Webhook(json_data)
     room = teams_api.rooms.get(webhook_obj.data.roomId)
