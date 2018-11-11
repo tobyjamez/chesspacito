@@ -1,19 +1,19 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 import os
 import time 
 import random
 
 
-# In[ ]:
+# In[2]:
 
 board = [" "," "," "," "," "," "," "," "," "," "]
 
 
-# In[ ]:
+# In[3]:
 
 def print_board():
     
@@ -29,7 +29,7 @@ def print_board():
    
 
 
-# In[ ]:
+# In[4]:
 
 while True:
     os.system('clear')
@@ -55,6 +55,17 @@ while True:
         break
         
     print_board()
+    isFull = True
+    for i in range(1,10):
+        if board[i] == ' ':
+            isFull = False
+            break
+            
+            
+    if isFull == True:
+        
+        print('Tie!')
+        break
     choiceO = input('Please choose a place to put O.')
     choiceO = int(choiceO)
     if board[choiceO] == " ":
@@ -73,7 +84,9 @@ while True:
         print_board()
         print('O wins!')
         
-        break  
+        break
+        
+        
 
 
 # In[ ]:
