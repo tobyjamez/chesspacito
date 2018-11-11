@@ -1,0 +1,5 @@
+webexteamssdk==1.0.3
+requests==2.9.1
+Flask==0.12.2
+python_chess==0.23.10
+PyYAML==3.13
