@@ -108,3 +108,4 @@ venv.bak/
 
 # Access tokens   //nice try FBI
 conf.py
+*.yaml
